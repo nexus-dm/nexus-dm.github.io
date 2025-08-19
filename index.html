@@ -1,0 +1,708 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-18066333-8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "UA-18066333-8");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sensory" />
+    <meta
+      name="keywords"
+      content="high performance computing, Dark Matter, workflow, machine learning"
+    />
+    <meta name="author" content="Michela Taufer" />
+    <title>Nexus-DM</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+
+    <style>
+      .accordion {
+        cursor: pointer;
+        padding: 0px;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: white;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        outline: 2px solid;
+        font-family: sans-serif;
+      }
+
+      .cta-link {
+        background-color: #f5f5f7;
+        position: relative;
+        margin: 0 auto;
+        padding: 1em;
+        color: #fefefe;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        border-radius: 10px;
+        width: 400px;
+      }
+
+      .logo-hover {
+        transition: transform 0.3s ease;
+        transform: scale(1);
+      }
+
+      .logo-hover:hover {
+        transform: scale(1.1);
+      }
+
+      @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+
+      .cta-link::after,
+      .cta-link::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(
+          from var(--angle),
+#000000,   /* black */
+  #0a0a1f,   /* deep midnight blue */
+  #1a0033,   /* very dark violet */
+  #2d004d,   /* cosmic purple */
+  #330066,   /* dark indigo */
+  #4b0082,   /* indigo (electric) */
+  #2d004d,   /* back to cosmic purple */
+  #1a0033,   /* very dark violet */
+  #0a0a1f,   /* deep midnight blue */
+  #000000    /* back to black */
+        );
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        border-radius: 10px;
+        animation: 3s spin linear infinite;
+        padding: 36px;
+        transform: scale(1.02);
+      }
+
+      .cta-link::before {
+        filter: blur(1.5rem);
+        opacity: 0.7;
+      }
+
+      @keyframes spin {
+        from {
+          --angle: 0deg;
+        }
+        to {
+          --angle: 360deg;
+        }
+      }
+
+      .cta-logo {
+        display: block;
+        width: 100%;
+        height:100%;
+      }
+
+      @media (max-width: 600px) {
+        .cta-link {
+          font-size: 16px;
+          padding: 0.75em;
+        }
+
+        .cta-link::after,
+        .cta-link::before {
+          padding: 24px;
+          transform: scale(1.01);
+        }
+
+        #home-slider .slide-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style></head
+  ><!--/head-->
+
+  <body>
+    <!--/#header-->
+    <section id="home-slider">
+      <div class="container">
+        <div class="row">
+          <div class="main-slider">
+            <div class="slide-text">
+              <h1>
+                <b>NEXUS-DM:</b> <br />
+                Networked Exchange for Dark Matter <br />
+                “Connect data, code, and community"
+              </h1>
+              <p>
+                Funded by the National Science Foundation (NSF) under grant
+                numbers
+                <a
+                  href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2531754&HistoricalAwards=false"
+                  target="_blank"
+                  >2531754</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2138811&HistoricalAwards=false"
+                  target="_blank"
+                  >2138811</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331152&HistoricalAwards=false"
+                  target="_blank"
+                  >2331152</a
+                >,
+              </p>
+            </div>
+            <div id="slide-logo-container">
+              <div id="slide-logo-inner-container">
+                <div id="slide-logo-images-container">
+                  <img src="images/logos/nexus-dm_logo_o.png" height="300" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+    </section>
+    <!--/#home-slider-->
+
+    <!--services-->
+    <section id="services">
+      <div class="container">
+        <div id="testimonial-container">
+          <div class="row">
+            <h1 class="padding-top bold title text-center">About NEXUS-DM</h1>
+            <div class="text-center" style="padding: 20px">
+              <span
+                style="
+                  font-size: 18px;
+                  font-family: &quot;Noto Sans&quot;, sans-serif;
+                "
+              >
+                NEXUS-DM is a FAIR-aligned Dark Matter Data Commons designed to
+                close critical gaps in transparency, reproducibility, and
+                accessibility of dark matter experimental data. Its modular
+                components include:
+              </span>
+            </div>
+            <!-- Col 1 -->
+            <div class="col-md-6">
+              <div class="testimonial">
+                <div
+                  class="media wow scaleIn"
+                  data-wow-duration="500ms"
+                  data-wow-delay="300ms"
+                >
+                  <div class="pull-left" style="margin-right: 10px">
+                    <span class="fa-stack fa-1x">
+                      <i
+                        class="fa fa-square fa-stack-2x"
+                        style="color: orangered"
+                      ></i>
+                      <i class="fa fa-folder-open-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <span style="font-size: 18px"
+                      ><b>Curated Data Repository:</b> End-to-end infrastructure
+                      for storing and accessing raw and processed dark matter
+                      datasets, starting with <b>CDMS</b> and <b>DELight</b> data.</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="media wow scaleIn"
+                  data-wow-duration="500ms"
+                  data-wow-delay="300ms"
+                >
+                  <div class="pull-left" style="margin-right: 10px">
+                    <span class="fa-stack fa-1x">
+                      <i
+                        class="fa fa-square fa-stack-2x"
+                        style="color: royalblue"
+                      ></i>
+                      <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <span style="font-size: 18px"
+                      ><b>Reusable Interfaces:</b> User-friendly command-line
+                      and Python APIs that integrate with NSDF and Pegasus for
+                      scalable AI/ML workflows.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end col -->
+            <!-- Col 2 -->
+            <div class="col-md-6">
+              <div class="testimonial">
+                <div
+                  class="media wow scaleIn"
+                  data-wow-duration="500ms"
+                  data-wow-delay="300ms"
+                >
+                  <div class="pull-left" style="margin-right: 10px">
+                    <span class="fa-stack fa-1x">
+                      <i
+                        class="fa fa-square fa-stack-2x"
+                        style="color: yellowgreen"
+                      ></i>
+                      <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <span style="font-size: 18px"
+                      ><b> AI/ML-Enhanced Workflows:</b> Demonstrations of
+                      GAN-based bias mitigation, denoising, and calibration
+                      pipelines for reproducible and explainable analysis.</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="media wow scaleIn"
+                  data-wow-duration="500ms"
+                  data-wow-delay="300ms"
+                >
+                  <div class="pull-left" style="margin-right: 10px">
+                    <span class="fa-stack fa-1x">
+                      <i
+                        class="fa fa-square fa-stack-2x"
+                        style="color: darkslategrey"
+                      ></i>
+                      <i
+                        class="fa fa-graduation-cap fa-stack-1x fa-inverse"
+                      ></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <span style="font-size: 18px">
+                      <b>Education and Training:</b> Open tutorials, Jupyter
+                      notebooks, and an ACCESS Affinity Group to foster
+                      reproducibility and workforce development.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end col -->
+          </div>
+          <!--/#row-->
+        </div>
+        <!--/#testimonial-container-->
+      </div>
+      <!--/#container-->
+    </section>
+
+    <!--FAIR principles-->
+    <section id="services">
+      <div class="container">
+        <div id="testimonial-container">
+          <div class="row">
+            <h1 class="padding-top bold title text-center">
+              NEXUS-DM and FAIR
+            </h1>
+            <div class="text-center" style="padding: 20px">
+              <span
+                style="
+                  font-size: 18px;
+                  font-family: &quot;Noto Sans&quot;, sans-serif;
+                "
+              >
+                NEXUS-DM operationalizes the FAIR principles (Findable,
+                Accessible, Interoperable, Reusable) to maximize discovery and
+                ensure long-term stewardship:
+              </span>
+            </div>
+            <!-- Column 1 -->
+            <div class="col-md-6">
+              <div class="testimonial">
+                <div
+                  class="media wow scaleIn"
+                  data-wow-duration="500ms"
+                  data-wow-delay="300ms"
+                >
+                  <div class="pull-left" style="margin-right: 10px">
+                    <span class="fa-stack fa-1x">
+                      <i
+                        class="fa fa-square fa-stack-2x"
+                        style="color: orangered"
+                      ></i>
+                      <i
+                        class="fa fa-archive fa-stack-1x fa-inverse"
+                      ></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <span style="font-size: 18px"
+                      ><b> FAIR Digital Objects (FDOs):</b> Self-describing
+                      containers encapsulating data, metadata, and workflows,
+                      ensuring transparency, traceability, and
+                      machine-actionable reuse.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end col -->
+            <!-- Column 2 -->
+            <div class="col-md-6">
+              <div class="testimonial">
+                <div
+                  class="media wow scaleIn"
+                  data-wow-duration="500ms"
+                  data-wow-delay="300ms"
+                >
+                  <div class="pull-left" style="margin-right: 10px">
+                    <span class="fa-stack fa-1x">
+                      <i
+                        class="fa fa-square fa-stack-2x"
+                        style="color: blue"
+                      ></i>
+                      <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </div>
+                  <div class="media-body">
+                    <span style="font-size: 18px">
+                      <b>Open Science Integration:</b> Alignment with NSF’s
+                      National Science Data Fabric (NSDF) and ACCESS
+                      cyberinfrastructure to provide sustainable, interoperable,
+                      and AI-ready data services.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- testimonial -->
+            </div>
+            <!-- end col -->
+          </div>
+          <!--/#row-->
+          <div
+            class=""
+            style="
+              font-size: 22px;
+              font-weight: 600;
+              margin-bottom: 30px;
+              text-align: center;
+            "
+          >
+            Ready to dive in? Join us and explore the full power of our
+            software, data, and documentation! Discover more here:
+          </div>
+          <div style="display: flex; justify-content: center">
+            <a
+              href="https://nsdf-fabric.github.io/nsdf-slac/"
+              target="_blank"
+              class="cta-link"
+            >
+              <img
+                src="images/logos/nexus-dm_logo.png"
+                alt="NEXUS-DM Logo"
+                class="cta-logo logo-hover"
+              />
+            </a>
+          </div>
+        </div>
+        <!--/#testimonial-container-->
+      </div>
+      <!--/#container-->
+    </section>
+    <!-- end of fair principles-->
+
+    <section id="publications">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-12 padding-top wow fadeInLeft"
+            data-wow-duration="1000ms"
+            data-wow-delay="300ms"
+          >
+            <h1 class="bold title text-center">Recent Publications</h1>
+
+            <!--2025-->
+            <div class="row" style="padding-top: 20px">
+              <div class="col-xs-12 col-sm-6 publication">
+                <i class="fa fa-file-text-o"></i>
+                Amy Roberts, Jack Marquez, Kin Hong NG, Kitty Mickelson, Aashish
+                Panta, Giorgio Scorzelli, Amy Gooch, Prisca Cushman, Matthew
+                Fritts, Himangshu Neog, Valerio Pascucci, and Michela Taufer.
+                <b
+                  >he Making of a Community Dark Matter Dataset with the
+                  National Science Data Fabric.</b
+                >
+                <i> arXiv preprint arXiv:2507.13297, 2025.</i>
+                <a href="https://arxiv.org/abs/2507.13297" target="_blank"
+                  >[link]</a
+                >
+              </div>
+
+              <div class="col-xs-12 col-sm-6 publication">
+                <i class="fa fa-file-text-o"></i>
+                Michela Taufer, Heberth Martinez*, Jakob Luettgau*, Lauren
+                Whitnah, Giorgio Scorzelli, Pania Newel, Aashish Panta, Timo
+                Bremer, Doug Fils, Christine R. Kirkpatrick, and Valerio
+                Pascucci.
+                <b
+                  >Enhancing Scientific Research with FAIR Digital Objects in
+                  the National Science Data Fabric.</b
+                >
+                <i>
+                  IEEE Computing in Science and Engineering (CiSE), 25(5):39–47,
+                  2023. 10.1109/MCSE.2024.3363828.
+                </i>
+              </div>
+            </div>
+    </section>
+
+    <section id="team">
+      <div class="container">
+        <div
+          id="team-carousel"
+          class="carousel slide wow fadeIn"
+          data-ride="carousel"
+          data-wow-duration="400ms"
+          data-wow-delay="400ms"
+        >
+          <div class="row padding-top">
+            <h1
+              class="title text-center wow fadeInDown"
+              data-wow-duration="500ms"
+              data-wow-delay="300ms"
+            >
+              Meet the Team
+            </h1>
+            <p
+              class="text-center wow fadeInDown"
+              data-wow-duration="400ms"
+              data-wow-delay="400ms"
+            ></p>
+            <!--clearfix xs every 2 to ensure uniform height in each row on mobile-->
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-2 col-xs-6">
+              <div class="team-single-wrapper">
+                <div class="team-single">
+                  <div class="person-thumb">
+                    <img
+                      src="images/about/profile.png"
+                      class="img-responsive"
+                      alt="Amy Roberts profile picture"
+                    />
+                  </div>
+                  <div class="social-profile">
+                    <ul class="nav nav-pills">
+                      <li>
+                        <a href="mailto:amy.roberts@ucdenver.edu"
+                          ><i class="fa fa-envelope"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="person-info" style="text-align: center;">
+                  <h2>Amy Roberts</h2>
+                  <p style="font-weight: 600;">Principal Investigator</p>
+                  <p>University of Colorado Denver</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-2 col-xs-6">
+              <div class="team-single-wrapper">
+                <div class="team-single">
+                  <div class="person-thumb">
+                    <img
+                      src="images/about/michela.jpg"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-profile">
+                    <ul class="nav nav-pills">
+                      <li>
+                        <a href="mailto:mtaufer@utk.edu"
+                          ><i class="fa fa-envelope"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="https://www.eecs.utk.edu/people/faculty/dr-michela-taufer/" target="_blank">
+                          <i class="fa fa-link"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="person-info" style="text-align: center;">
+                  <h2>Michela Taufer</h2>
+                  <p style="font-weight: 600;">Co-Principal Investigator</p>
+                  <p>University of Tennessee Knoxville</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-2 col-xs-6">
+              <div class="team-single-wrapper">
+                <div class="team-single">
+                  <div class="person-thumb">
+                    <img
+                      src="images/about/jack.png"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-profile">
+                    <ul class="nav nav-pills">
+                      <li>
+                        <a href="mailto:jmarque4@utk.edu"
+                          ><i class="fa fa-envelope"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="person-info" style="text-align:center">
+                  <h2>Jack Marquez</h2>
+                  <p style="font-weight: 600;">Research Assistant Professor</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-2 col-xs-6">
+              <div class="team-single-wrapper">
+                <div class="team-single">
+                  <div class="person-thumb">
+                    <img
+                      src="images/about/kinhongng.png"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </div>
+                  <div class="social-profile">
+                    <ul class="nav nav-pills">
+                      <li>
+                        <a href="mailto:kng3@utk.edu"
+                          ><i class="fa fa-envelope"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="person-info" style="text-align:center">
+                  <h2>Kin Hong NG</h2>
+                  <p style="font-weight: 600;">Research Scientist</p>
+                </div>
+              </div>
+            </div>                
+        </div>
+      </div>
+    </section>
+    <!--/#team-->
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-text text-center">
+              <p>
+                &copy;
+                <a href="https://nsdf-fabric.github.io/nsdf-slac/" target="_blank"
+                  >2025 NEXUS-DM</a
+                >
+              </p>
+              <p>
+                NEXUS-DM is funded by the National Science Foundation (NSF) under grant
+                numbers
+                <a
+                  href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2531754&HistoricalAwards=false"
+                  target="_blank"
+                  >2531754</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2138811&HistoricalAwards=false"
+                  target="_blank"
+                  >2138811</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331152&HistoricalAwards=false"
+                  target="_blank"
+                  >2331152</a
+                >,
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--/#footer-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
