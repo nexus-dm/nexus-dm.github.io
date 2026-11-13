@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-18066333-8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "UA-18066333-8");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NEXUS-DM: Networked Exchange for Dark Matter: Connect data, code, and community"
+    />
+    <meta
+      name="keywords"
+      content="high performance computing, Dark Matter, workflow, machine learning"
+    />
+    <meta name="author" content="Michela Taufer" />
+    <title>Nexus-DM</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+
+    <style>
+      .accordion {
+        cursor: pointer;
+        padding: 0px;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: white;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        outline: 2px solid;
+        font-family: sans-serif;
+      }
+
+      .cta-link {
+        background-color: #f5f5f7;
+        position: relative;
+        margin: 0 auto;
+        padding: 1em;
+        color: #fefefe;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        border-radius: 10px;
+        width: 400px;
+      }
+
+      .logo-hover {
+        transition: transform 0.3s ease;
+        transform: scale(1);
+      }
+
+      .logo-hover:hover {
+        transform: scale(1.1);
+      }
+
+      @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+
+      .cta-link::after,
+      .cta-link::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(
+          from var(--angle),
+          #000000,
+          /* black */ #0a0a1f,
+          /* deep midnight blue */ #1a0033,
+          /* very dark violet */ #2d004d,
+          /* cosmic purple */ #330066,
+          /* dark indigo */ #4b0082,
+          /* indigo (electric) */ #2d004d,
+          /* back to cosmic purple */ #1a0033,
+          /* very dark violet */ #0a0a1f,
+          /* deep midnight blue */ #000000 /* back to black */
+        );
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        border-radius: 10px;
+        animation: 3s spin linear infinite;
+        padding: 36px;
+        transform: scale(1.02);
+      }
+
+      .cta-link::before {
+        filter: blur(1.5rem);
+        opacity: 0.7;
+      }
+
+      @keyframes spin {
+        from {
+          --angle: 0deg;
+        }
+        to {
+          --angle: 360deg;
+        }
+      }
+
+      .cta-logo {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 600px) {
+        .cta-link {
+          font-size: 16px;
+          padding: 0.75em;
+        }
+
+        .cta-link::after,
+        .cta-link::before {
+          padding: 24px;
+          transform: scale(1.01);
+        }
+
+        #home-slider .slide-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style></head
+  ><!--/head-->
+
+  <body>
+    <!--/#header-->
+    <!-- Remove this banner when there are no upcoming events. -->
+    <div class="container-fluid">
+      <div
+        class="alert alert-info text-center"
+        role="status"
+        style="padding: 5px; margin-bottom: 8px; font-size: 14px"
+      >
+        <strong>Upcoming Event:</strong> SESAPS 2026 · Kennesaw, GA · Saturday,
+        November 14, 11:45 AM–12:45 PM · Moderated Discussion —
+        <a href="events.html#events-content">Click here for more details</a>
+      </div>
+    </div>
+
+    <section id="home-slider">
+      <div class="container">
+        <div class="row">
+          <div class="main-slider">
+            <div class="slide-text">
+              <h1>
+                <b>NEXUS-DM:</b> <br />
+                Networked Exchange for Dark Matter <br />
+                “Connect data, code, and community"
+              </h1>
+              <p>
+                Funded by the National Science Foundation (NSF) under grant
+                numbers
+                <a
+                  href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2531754"
+                  target="_blank"
+                  >2531754</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2138811"
+                  target="_blank"
+                  >2138811</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2331152"
+                  target="_blank"
+                  >2331152</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2609465"
+                  target="_blank"
+                  >2609465</a
+                >
+              </p>
+            </div>
+            <div id="slide-logo-container">
+              <div id="slide-logo-inner-container">
+                <div id="slide-logo-images-container">
+                  <img src="images/logos/nexus-dm_logo_o.png" height="300" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+    </section>
+    <!--/#home-slider-->
+
+    <div class="container">
+      <div class="row">
+        <p
+          class="text-center padding-top"
+          style="font-size: 20px; font-weight: 700"
+        >
+          <a href="index.html#about-us">About Us</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="#events-content">Events</a>
+        </p>
+      </div>
+    </div>
+
+    <section id="events-content">
+      <div class="container">
+        <div class="row">
+          <h1 class="padding-top bold title text-center">Events</h1>
+
+          <h2 class="padding-top text-center" style="font-weight: 600">
+            Upcoming Events
+          </h2>
+          <div class="col-md-12">
+            <div
+              class="testimonial wow fadeInUp"
+              data-wow-duration="800ms"
+              data-wow-delay="200ms"
+              style="border: 0; box-shadow: none; background: transparent"
+            >
+              <button
+                id="sesaps-2026"
+                class="accordion active btn btn-default btn-block"
+                style="
+                  padding: 20px;
+                  font-size: 18px;
+                  text-align: center;
+                  border: 0;
+                  box-shadow: none;
+                "
+              >
+                <strong>
+                  SESAPS 2026 · Kennesaw, GA · Saturday, November 14, 11:45
+                  AM–12:45 PM
+                </strong>
+                <br />
+                <span>Moderated Discussion</span>
+              </button>
+              <div
+                class="panel"
+                style="
+                  padding: 20px;
+                  font-size: 18px;
+                  border: 0;
+                  outline: 0;
+                  box-shadow: none;
+                  display: block;
+                "
+              >
+                <p>
+                  <strong
+                    >Open physics data: what license and attribution terms
+                    should it carry?</strong
+                  >
+                </p>
+                <p>
+                  Public-access rules now require physics collaborations to plan
+                  data releases, but none say what license the data should
+                  carry, who must be credited, or what a user may build from it.
+                  The
+                  <a
+                    href="https://det-lab.github.io/open-physics-data-terms-site/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >site</a
+                  >
+                  documents what collaborations across physics have actually
+                  done and highlights the questions that remain open.
+                </p>
+                <p>
+                  Organized by Amy Roberts (CU Denver, SuperCDMS), Michela
+                  Taufer (UT Knoxville), and Jessica Walker (UT Knoxville).
+                </p>
+                <p>
+                  Contributions are licensed CC BY 4.0, kept at
+                  <a
+                    href="https://github.com/det-lab/open-physics-data-terms"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >github.com/det-lab/open-physics-data-terms</a
+                  >, and archived at Zenodo with each release.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="padding-top text-center" style="font-weight: 600">
+            Past Events
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-text text-center">
+              <p>
+                &copy;
+                <a
+                  href="https://nsdf-fabric.github.io/nexus-dm/"
+                  target="_blank"
+                  >2025 NEXUS-DM</a
+                >
+              </p>
+              <p>
+                NEXUS-DM is funded by the National Science Foundation (NSF)
+                under grant numbers
+                <a
+                  href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2531754"
+                  target="_blank"
+                  >2531754</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2138811"
+                  target="_blank"
+                  >2138811</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2331152"
+                  target="_blank"
+                  >2331152</a
+                >,
+                <a
+                  href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2609465"
+                  target="_blank"
+                  >2609465</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
